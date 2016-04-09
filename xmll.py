@@ -10,15 +10,18 @@ import xmltodict
 
 with open('20160319RHIL0.xml') as f:
     my = xmltodict.parse(f.read())
-    for event in my[1]:
-        eventID = event["@id"]
-        location = event["@venue"]
-        eventDate = event["@date"]
-        print( eventID + '\t' + location + '\t' + eventDate)
-        for race in my['meeting']['race']:
-            print(race["@id"] + '\t' + race["@number"])
-            for noms in race['nomination']:
-                saddle = noms["@number"]
-                horse = noms["@horse"]
-                horseId = noms["@id"]
-                print(saddle + '\t' + horse + '\t' + horseId)
+    print(my['meeting']["@id"])
+#    for event in my['meeting']:
+    eventID = my['meeting']["@id"]
+    location = my['meeting']["@venue"]
+    eventDate = my['meeting']["@date"]
+#        print( eventID + '\t' + location + '\t' + eventDate)
+    meeting = [eventID, location, eventDate]
+    print(meeting)
+    for race in my['meeting']['race']:
+        print(race["@id"] + '\t' + race["@number"])
+        for noms in race['nomination']:
+            saddle = noms["@number"]
+            horse = noms["@horse"]
+            horseId = noms["@id"]
+            print(saddle + '\t' + horse + '\t' + horseId)
