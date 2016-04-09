@@ -8,9 +8,9 @@ This is a temporary script file.
 import xmltodict
 
 
-with open('20160319RHIL0.xml') as f:
+with open('20160409RAND0.xml') as f:
     my = xmltodict.parse(f.read())
-    for event in my[1]:
+    for event in my['meeting']:
         eventID = event["@id"]
         location = event["@venue"]
         eventDate = event["@date"]
