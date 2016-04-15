@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Think_Stats_Second_Edition.pdf
+/Think_Bayes.pdf
+/RAND.json
+/json2csv/
+/Introducing_Python.pdf
+/Instant_Data_Intensive_Apps_with_Pandas_How_to.pdf
+/Fluent_Python.pdf
+/2016rand.json
