@@ -1,4 +1,5 @@
 import xmltodict
+
 '''import csv
 import re
 from sys import argv
@@ -20,7 +21,7 @@ with open('20160319RHIL0.xml') as f:
     eventDate = my['meeting']["@date"]
     meeting = [eventID, location, eventDate]
     # print(['meeting']['race']["@number"])
-    fields = []
+    raceFields = []
     for race in my['meeting']['race']:
         raceArr = []
         # race.append(race["@id"],race["@number"])
@@ -44,10 +45,10 @@ with open('20160319RHIL0.xml') as f:
 
             myArr = [eventID, location, eventDate, raceNum, raceID, saddle,
                      horse, horseId, barrier, career, age, description, weights]
-            fields.append(myArr)
+            raceFields.append(myArr)
 
 
-print(fields)
+print(raceFields)
 
 '''MY_FILE = out_file_name(FILENAME)
 
